@@ -1,0 +1,40 @@
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <ul class="list-inline">
+                    {% assign pages = site.pages | sort:"order" %}
+                    {% for node in pages %}
+                        {% if node.menu == 'footer' %}
+                            {% if page.url == node.url %}
+                                <li class="active"><a href="{{node.url}}">{{node.title}}</a></li>
+                            {% else %}
+                                <li><a href="{{node.url}}">{{node.title}}</a></li>
+                            {% endif %}
+                            &centerdot;
+                        {% endif %}
+                    {% endfor %}
+                    <li><a href="http://2016.phpsouthcoast.co.uk">2016 site</a></li>
+                    &centerdot;
+                    <li><a href="http://2015.phpsouthcoast.co.uk">2015 site</a></li>
+                </ul>
+                <p class="copyright text-muted small">{{ site.copyright }}</p>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline">
+                    {% for social in site.social %}
+                    <li>
+                        <a href="{{ social.url }}" title="{{ social.title | capitalize }}">
+                            <span class="fa-stack fa-lg fa-fw">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-{{ social.title }} fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
