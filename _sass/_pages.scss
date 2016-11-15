@@ -1,6 +1,9 @@
-.information {
-    @import "pages/information";
-}
 .index {
     @import "pages/index";
+}
+.venue {
+    @import "pages/venue";
+}
+.tourism {
+    @import "pages/tourism";
 }
