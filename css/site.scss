@@ -1,6 +1,7 @@
 ---
 ---
 
+@import "../_sass/variables";
 @import "../_sass/bootstrap";
 @import "../_sass/font-awesome";
 
@@ -15,14 +16,28 @@ body {
 
 footer {
     padding: 35px 0;
-    background-color: #f3f3f3;
+    background-color: #3f3e51;
     position: absolute;
     bottom: 0;
     width: 100%;
+    color: #AAA;
+
+    a {
+        color: white;
+
+        &:active,
+        &:hover {
+            color: white;
+        }
+
+        i {
+            color: #3f3e51;
+        }
+    }
 }
 
 nav {
-    padding: 22px 0 10px 0;
+    padding: 18px 0 5px 0;
 
     &.navbar-default {
         background: white;
@@ -40,9 +55,20 @@ nav {
 
     h1 {
         margin: 0;
-        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
         font-size: 5em;
     }
+
+    h2,
+    h3 {
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    }
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 @import "../_sass/pages";
