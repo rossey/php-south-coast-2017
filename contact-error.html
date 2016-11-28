@@ -1,0 +1,31 @@
+---
+title: Contact
+layout: default
+bodyClass: contact
+permalink: /contact/error
+---
+
+<div class="jumbotron">
+    <div class="container">
+        <header>
+            <h1>{{page.title}}</h1>
+        </header>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Sorry!</h2>
+    <p>There was a problem sending us a message. You may try again, or alternatively contact us on one of the
+        social media platforms below.</p>
+
+    <ul class="list-unstyled">
+        {% for social in site.social %}
+        <li>
+            <i class="fa fa-{{ social.title }} fa-2x fa-fw"></i>
+            <a href="{{ social.url }}" title="{{ social.title | capitalize }}">
+                {{ social.title | capitalize }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

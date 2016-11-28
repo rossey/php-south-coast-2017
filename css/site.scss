@@ -1,0 +1,84 @@
+---
+---
+
+@import "../_sass/variables";
+@import "../_sass/bootstrap";
+@import "../_sass/font-awesome";
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-bottom: 200px;
+}
+
+footer {
+    padding: 35px 0;
+    background-color: #3f3e51;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #AAA;
+
+    a {
+        color: white;
+
+        &:active,
+        &:hover {
+            color: white;
+        }
+
+        i {
+            color: #3f3e51;
+        }
+    }
+}
+
+nav {
+    padding: 18px 0 5px 0;
+
+    &.navbar-default {
+        background: white;
+        border: none;
+    }
+}
+
+.jumbotron {
+    background-image: url(/img/stones.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+
+    h1 {
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+        font-size: 5em;
+    }
+
+    h2,
+    h3 {
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    }
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#ticket-widget-homepage .tito-wrapper {
+    background-color: white;
+}
+#ticket-button-nav button {
+    @extend .btn;
+    @extend .btn-primary;
+    margin-left: 15px;
+    margin-top: 8px;
+}
+
+@import "../_sass/pages";
