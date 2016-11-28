@@ -18,7 +18,7 @@ email: info@phpsouthcoast.co.uk
 description: > # this means to ignore newlines until "baseurl:"
   Join us for a PHP Conference on the south coast, UK in Summer 2017!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: http://2017.phpsouthcoast.co.uk
+url: https://2017.phpsouthcoast.co.uk
 keywords: "PHP, Conference, South coast, Hampshire, Portsmouth, England"
 copyright: 'Copyright &copy; 2017 PHP South Coast conference. All rights reserved. PHP Hampshire CIC is registered in England and Wales, company number 09312297. VAT registered, number GB 226 583 594.'
 credits: 'Edit this site on <a href="https://github.com/phphants/php-south-coast-2017">GitHub</a>.'
