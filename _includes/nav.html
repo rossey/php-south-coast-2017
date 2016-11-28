@@ -26,12 +26,8 @@
                     {% endif %}
                 {% endfor %}
                 <li><a href="{{site.cfpUrl}}">Call for Papers</a></li>
-                <li class="hidden">
-                    <form action="{{site.ticketsUrl}}" class="navbar-form">
-                        <button type="submit" class="btn btn-primary">
-                            Buy Tickets
-                        </button>
-                    </form>
+                <li>
+                    <tito-button event="phphants/php-south-coast-2017" id="ticket-button-nav"></tito-button>
                 </li>
             </ul>
         </div>

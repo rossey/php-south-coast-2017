@@ -71,4 +71,14 @@ nav {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+#ticket-widget-homepage .tito-wrapper {
+    background-color: white;
+}
+#ticket-button-nav button {
+    @extend .btn;
+    @extend .btn-primary;
+    margin-left: 15px;
+    margin-top: 8px;
+}
+
 @import "../_sass/pages";
