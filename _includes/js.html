@@ -4,6 +4,7 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="/js/bootstrap.min.js"></script>
 
+{% if jekyll.environment == "production" %}
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -29,6 +30,7 @@
                src="https://www.facebook.com/tr?id=1691129124509948&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
+{% endif %}
 
 <link rel="stylesheet" type="text/css" href='https://css.tito.io/v1.1' />
 <script src="https://js.tito.io/v1" async></script>
