@@ -16,9 +16,21 @@ bodyClass: index
     </div>
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+            {% assign post = site.posts.first %}
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt }}</p>
+            <p><a href="{{ post.url }}">Read more</a></p>
+        </div>
+    </div>
+</div>
+
 <div class="container text-center user-groups">
     <div class="row">
-        <h2 class="section-heading">Run by the community</h2>
+        <h2>Run by the community</h2>
     </div>
     <div class="row">
         <div class="col-md-4">
