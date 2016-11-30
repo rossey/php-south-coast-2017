@@ -11,14 +11,30 @@ bodyClass: index
         <h1>{{site.confDate}}</h1>
         <h2>Portsmouth, UK</h2>
         <hr class="intro-divider">
-        <h3>A community conference by the sea</h3>
+        <h3>A community conference by the sea, with two days of talks.</h3>
         <tito-widget event="phphants/php-south-coast-2017" id="ticket-widget-homepage"></tito-widget>
+    </div>
+</div>
+
+<div class="container social">
+    <div class="row">
+        <div class="col-md-6">
+            {% assign post = site.posts.first %}
+            <h3>{{ post.title }}</h3>
+            {{ post.excerpt }}
+            <p><a href="{{ post.url }}">Read more</a></p>
+        </div>
+        <div class="col-md-6">
+            <a class="twitter-timeline" data-height="250" href="https://twitter.com/phpsouthcoast">Tweets by
+                phpsouthcoast</a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
     </div>
 </div>
 
 <div class="container text-center user-groups">
     <div class="row">
-        <h2 class="section-heading">Run by the community</h2>
+        <h2>Run by the community</h2>
     </div>
     <div class="row">
         <div class="col-md-4">
