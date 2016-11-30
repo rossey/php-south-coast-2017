@@ -37,11 +37,23 @@ footer {
 }
 
 nav {
-    padding: 18px 0 5px 0;
+    @media (min-width: $grid-float-breakpoint) {
+        padding: 18px 0 5px 0;
+    }
 
     &.navbar-default {
         background: white;
         border: none;
+    }
+
+    ul {
+        & > li {
+            & > a {
+                @media (min-width: $grid-float-breakpoint) {
+                    border-radius: 4px;
+                }
+            }
+        }
     }
 }
 
