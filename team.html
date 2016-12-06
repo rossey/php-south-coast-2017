@@ -1,0 +1,68 @@
+---
+title: Team
+layout: default
+menu: footer
+order: 1
+
+team:
+- who: James Titcumb
+  avatar: james.png
+  role: Conference Chair
+- who: Alex Ross
+  avatar: alex.jpg
+  role: Materials, print, design
+- who: Gary Hockin
+  avatar: gary.jpg
+  role: Speaker
+- who: Dave Baker
+  avatar: dave.jpg
+  role: Business Development
+- who: Lee Boynton
+  avatar: lee.jpg
+  role: Website
+
+helpers:
+- Ashley Pinner
+- Chris Hoult
+- Hannah Titcumb
+- Lee Stone
+- Rich Sage
+---
+
+<div id="main" class="team">
+    <div class="container">
+        <header>
+            <h2>Organisation Team</h2>
+        </header>
+
+        <p>
+            The organisation team are responsible for ensuring the smooth running of the conference. From making
+            bookings, signing contracts, ordering stationary, herding speakers, and keeping the website running, these
+            folks are core organisation team.
+        </p>
+
+        {% for person in page.team %}
+        <div class="team-member-card">
+            <h3>{{ person.who }}</h3>
+            <h4>{{ person.role }}</h4>
+            <img src="/img/team/{{ person.avatar }}" class="img-responsive" alt="{{ person.who }}">
+        </div>
+        {% endfor %}
+
+        <header>
+            <h2>Volunteer Helpers</h2>
+        </header>
+
+        <p>
+            We also have a team of extremely dedicated and amazing helpers who are involved in decision making, the
+            blind speaker selection and making sure the conference itself goes without a hitch on the day. We are
+            immensely grateful to all of our team members!
+        </p>
+
+        <ul>
+        {% for person in page.helpers %}
+            <li>{{ person }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
