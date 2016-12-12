@@ -8,18 +8,24 @@ team:
 - who: James Titcumb
   avatar: james.png
   role: Conference Chair
+  twitter: asgrim
+  class-extra: col-md-offset-1
 - who: Alex Ross
   avatar: alex.jpg
   role: Materials, print, design
+  twitter: rossey
 - who: Gary Hockin
   avatar: gary.jpg
-  role: Speaker
+  role: Speaker Liaison
+  twitter: GeeH
 - who: Dave Baker
   avatar: dave.jpg
   role: Business Development
+  twitter: fully_baked
 - who: Lee Boynton
   avatar: lee.jpg
   role: Website
+  twitter: leeboynton
 
 helpers:
 - Ashley Pinner
@@ -38,16 +44,21 @@ helpers:
         <p>
             The organisation team are responsible for ensuring the smooth running of the conference. From making
             bookings, signing contracts, ordering stationary, herding speakers, and keeping the website running, these
-            folks are core organisation team.
+            folks are part of the core organisation team.
         </p>
 
+        <div class="row">
         {% for person in page.team %}
-        <div class="team-member-card">
-            <h3>{{ person.who }}</h3>
-            <h4>{{ person.role }}</h4>
-            <img src="/img/team/{{ person.avatar }}" class="img-responsive" alt="{{ person.who }}">
-        </div>
+            <div class="col-md-2 {{ person.class-extra }}">
+            <div class="team-member-card">
+                <h3>{{ person.who }}</h3>
+                <h4>{{ person.role }}</h4>
+                <img src="/img/team/{{ person.avatar }}" class="img-responsive" alt="{{ person.who }}">
+                <a href="https://twitter.com/{{ person.twitter }}">@{{ person.twitter }}</a>
+            </div>
+            </div>
         {% endfor %}
+        </div>
 
         <header>
             <h2>Volunteer Helpers</h2>
