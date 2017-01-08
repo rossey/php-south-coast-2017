@@ -9,7 +9,6 @@ team:
   avatar: james.png
   role: Conference Chair
   twitter: asgrim
-  class-extra: col-md-offset-1
 - who: Alex Ross
   avatar: alex.jpg
   role: Materials, print, design
@@ -46,17 +45,20 @@ helpers:
             folks are part of the core organisation team.
         </p>
 
+        <div class="row center-block">
+            {% for person in page.team limit: 4 %}
+            <div class="col-md-3 center">
+                {% include team-card.html %}
+            </div>
+            {% endfor %}
+        </div>
+
         <div class="row">
-        {% for person in page.team %}
-            <div class="col-md-2 {{ person.class-extra }}">
-            <div class="team-member-card">
-                <h3>{{ person.who }}</h3>
-                <h4>{{ person.role }}</h4>
-                <img src="/img/team/{{ person.avatar }}" class="img-responsive" alt="{{ person.who }}">
-                <a href="https://twitter.com/{{ person.twitter }}">@{{ person.twitter }}</a>
+            {% for person in page.team limit: 4 offset: 4 %}
+            <div class="col-md-3 center">
+                {% include team-card.html %}
             </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
         </div>
 
         <header>
@@ -70,9 +72,9 @@ helpers:
         </p>
 
         <ul>
-        {% for person in page.helpers %}
+            {% for person in page.helpers %}
             <li>{{ person }}</li>
-        {% endfor %}
+            {% endfor %}
         </ul>
     </div>
 </div>
