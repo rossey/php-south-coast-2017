@@ -12,13 +12,30 @@ logos:
   size: 401x205
 - file: phpsc-500
   size: 500x256
+press-releases:
+- file: phpsc17-expansion
+  description: PHP South Coast 2017 to Expand Across Two Days
 ---
 
 <div id="main" class="press">
     <div class="container">
         <header>
-            <h2>Conference Assets</h2>
+            <h2>Press &amp; Logo</h2>
         </header>
+
+        <h3>Press Releases</h3>
+
+        <ul>
+            {% for pr in page.press-releases %}
+            <li>
+                <a href="/assets/{{ pr.file }}.pdf">
+                    {{ pr.description }}
+                </a> (PDF download)
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h3>Logo: Raster</h3>
         <p>
             If you would like to use our logo to link to the conference website for promotional reasons, please download
             one of the images below.
@@ -36,7 +53,7 @@ logos:
         </p>
         {% endfor %}
 
-        <h3>Raw Format</h3>
+        <h3>Logo: Vector</h3>
         <p>
             Alternatively the EPS file below contains a vector-based image of our logo which can be
             scaled to any resolution required and can be opened by most vector graphics editors.
