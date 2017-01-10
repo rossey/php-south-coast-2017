@@ -6,6 +6,30 @@ order: 1
 bodyClass: index
 ---
 
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Event",
+    "name": "{{ site.title }}",
+    "description": "PHP South Coast 2017 is a PHP-oriented community conference taking place in Portsmouth, UK in summer 2017.",
+    "url": "{{ site.url }}",
+    "startDate": "2017-06-09",
+    "endDate": "2017-06-10",
+    "location": {
+        "@type": "Place",
+        "name": "Action Stations",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Portsmouth Historic Dockyard",
+          "addressRegion": "Portsmouth",
+          "streetAddress": "College Road",
+          "postalCode": "PO1 3LJ"
+        }
+    },
+    "sameAs": {{ site.social | map: 'url' | jsonify }}
+}
+</script>
+
 <div class="jumbotron">
     <div class="container">
         <h1>{{site.confDate}}</h1>
