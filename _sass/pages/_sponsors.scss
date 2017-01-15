@@ -1,0 +1,27 @@
+h2 {
+    text-align: center;
+    margin-top: 60px;
+}
+
+h4 {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCCCCC;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.sponsors-inner {
+    p {
+        line-height: 2em;
+    }
+}
+
+.platinum {
+    h4 {
+        border-bottom-color: #E5E4E2;
+    }
+}
